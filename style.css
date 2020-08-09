@@ -1,0 +1,212 @@
+@font-face {
+  font-family: "Airbnb Cereal App Book";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./AirbnbCerealMedium.woff") format("woff");
+}
+
+body {
+  font-family: "Airbnb Cereal App Book";
+}
+
+/* HEADER */
+.header .col-md-4 {
+  font-size: 30px;
+  padding-top: 10px;
+  font-weight: bold;
+  box-shadow: 0px 4px 1px rgba(0, 0, 0, 0.25);
+}
+
+.header .col-md-4 span {
+  background-color: aqua;
+  color: white;
+  padding: 3px 10px;
+  font-size: 20px;
+  border-radius: 50%;
+}
+
+.header .col-md-8 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .col-md-8 div p {
+  font-size: 30px;
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+.search {
+  padding: 20px;
+}
+/* END HEADER */
+
+/* SIDEBAR */
+.sidebar .col-md-1 {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 20;
+}
+
+.sidebar .col-md-1 div {
+  padding: 20px;
+  cursor: pointer;
+}
+/* END SIDEBAR */
+
+/* MENU ITEM */
+.menu-item {
+  background-color: #eee;
+  display: grid;
+  /* gap: 20px; */
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-top: 10px;
+}
+
+.menu-item div:nth-child(odd) {
+  animation: anim 2s;
+}
+.menu-item div:nth-child(even) {
+  animation: anim 4s;
+}
+
+.menu-item div img {
+  transition: 0.3s;
+}
+
+.menu-item div img:hover {
+  transform: scale(0.9);
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.7);
+}
+
+.menu-item h3 {
+  font-size: 20px;
+  text-align: left;
+  font-weight: 300;
+  margin-left: 10px;
+  /* font-family: "Pacifico", cursive; */
+  margin-top: 2px;
+  color: grey;
+}
+
+.menu-item p {
+  font-size: 15px;
+  text-align: left;
+  font-weight: bold;
+  margin-left: 10px;
+}
+/* END MENU ITEM */
+
+/* CART */
+.carts img {
+  animation: anim2 3s infinite;
+}
+
+div.carts h2 {
+  font-size: 30px;
+}
+
+div.carts p {
+  font-size: 20px;
+  color: #cecece;
+}
+/* END CART */
+
+
+/* RESPONSIVE BREAKPOINTS */
+@media (min-width: 576px) and (max-width: 1200px) { 
+
+   /* SIDEBAR */
+   .sidebar .col-md-1 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* HEADER */
+  .header .col-md-4 {
+    display: none;
+  }
+
+  /* MENU ITEM */
+  .menu-item {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  
+  }
+  .menu-item h3 {
+    font-size: 20px;
+    text-align: center;
+    margin-left: 0px;
+    /* font-family: "Pacifico", cursive; */
+    margin-top: 2px;
+    color: grey;
+  }
+
+  .menu-item p {
+    font-size: 15px;
+    text-align: center;
+    margin-left: 0px;
+  }
+
+  }
+
+@media (max-width: 575px) { 
+  /* SIDEBAR */
+  .sidebar .col-md-1 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* HEADER */
+  .header .col-md-4 {
+    display: none;
+  }
+
+  /* MENU ITEM */
+  .menu-item {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-item h3 {
+    font-size: 20px;
+    text-align: center;
+    margin-left: 0px;
+    /* font-family: "Pacifico", cursive; */
+    margin-top: 2px;
+    color: grey;
+  }
+
+  .menu-item p {
+    font-size: 15px;
+    text-align: center;
+    margin-left: 0px;
+  }
+}
+
+
+/* ANIMATION */
+@keyframes anim {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  100% {
+    opacity: 1;
+    trasform: scale(1);
+  }
+}
+
+@keyframes anim2 {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(.7);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

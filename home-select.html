@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="stylesheet" href="home.css" />
+
+    <!-- fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <title>Menu</title>
+  </head>
+  <body>
+    <!-- container -->
+    <div class="container-fluid">
+      <div class="row header text-center">
+        <div class="col-md-8">
+          <div class="menu">  <a href="./index.html"><img src="./img/menu.png"  style="padding: 20px"  alt=""></a></div>
+          <div><p>Food Items</p></div>
+          <div class="search"><img src="img/magnifying-glass.png" alt="" /></div>
+        </div>
+        <div class="col-md-4">
+          <p>Cart <span>3</span></p>
+        </div>
+      </div>
+  
+    </div>
+    
+    <!-- sidebar -->
+    <div class="row sidebar text-center">
+      <div class="col-md-1">
+        <div class="fork"><a href="./home-select.html"><img src="img/fork.png" alt="" width="56px" height="52px"/></a></div>
+        <div class="clipboard"><a href="./history.html"><img src="img/clipboard.png" alt="" /></a></div>
+        <div data-toggle="modal" data-target="#exampleModal2" class="add" ><img src="img/add.png" alt="" /></div>
+      </div>
+      <!-- menu item -->
+      <div class="col-md-7 menu-item">
+        <div class="selected-items">
+          <img src="menu-img/bear.png" alt="" />
+          <div class="correct">
+          <img src="img/check.png" alt="" class="check"> 
+          </div>
+          
+          <h3>Coffee Latte</h3>
+          <p>Rp. 15.000</p>
+        </div>
+        <div class="selected-items">
+          <img src="menu-img/blackforest.png" alt="" />
+          <div class="correct">
+            <img src="img/check.png" alt="" class="check"> 
+          </div>
+          <h3>Black Forest</h3>
+          <p>Rp. 30.000</p>
+        </div> 
+        <div>
+          <img src="menu-img/chickenkatsu.png" alt="" />
+          <h3>Chicken Katsu <br />Dabu-dabu</h3>
+          <p>Rp. 60.000</p>
+        </div>
+        <div class="selected-items">
+          <img src="menu-img/chocorum.png" alt="" />
+          <div class="correct">
+          <img src="img/check.png" alt="" class="check"> 
+          </div>
+          <h3>Chocorum</h3>
+          <p>Rp. 28.000</p>
+        </div>
+        <div>
+          <img src="menu-img/jeremy-ricketts-6ZnhM-xBpos-unsplash.png" alt="" />
+          <h3>Espresso</h3>
+          <p>Rp. 20.000</p>
+        </div>
+        <div>
+          <img src="menu-img/firdaus-roslan-pN769u0KHNA-unsplash.png" alt="" />
+          <h3>Cappucino</h3>
+          <p>Rp. 28.000</p>
+        </div>
+        <div>
+          <img src="menu-img/salmon.png" alt="" />
+          <h3>Salmon Truffle Teriyaki</h3>
+          <p>Rp. 68.000</p>
+        </div>
+        <div>
+          <img src="menu-img/redvelvet.png" alt="" />
+          <h3>Red Velvet latte</h3>
+          <p>Rp. 28.000</p>
+        </div>
+        <div>
+          <img src="menu-img/wiener.png" alt="" />
+          <h3>Wiener Schnitzel</h3>
+          <p>Rp. 60.000</p>
+        </div>
+      </div>
+
+      <!-- Cart -->
+      <div class="col-md-4 carts"> 
+        <div class="cart-img">
+          <div>
+            <img src="menu-img/blackforest.png" alt="" / width="100px"
+            height="100px">
+          </div>
+          <div class="selected-item">
+            <p>Black Forest</p>
+            <div>-</div>
+            <div>1</div>
+            <div>+</div>
+          </div>
+          <div class="price"><p>Rp. 30.000</p></div>
+        </div>
+        <div class="cart-img">
+          <div>
+            <img src="menu-img/bear.png" alt="" / width="100px" height="100px">
+          </div>
+          <div class="selected-item">
+            <p>Coffee Latte</p>
+            <div>-</div>
+            <div>1</div>
+            <div>+</div>
+          </div>
+          <div class="price"><p>Rp. 15.000</p></div>
+        </div>
+        <div class="cart-img">
+          <div>
+            <img src="menu-img/chocorum.png" alt="" / width="100px"
+            height="100px">
+          </div>
+          <div class="selected-item">
+            <p>Chocorum</p>
+            <div>-</div>
+            <div>1</div>
+            <div>+</div>
+          </div>
+          <div class="price"><p>Rp. 28.000</p></div>
+        </div>
+        <div class="total">
+          <p>Total: <span>Rp. 73.000</span></p>
+          <p>*Belum Termasuk PPN</p>
+          <button
+            type="button"
+            class="btn checkout"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          >
+            Checkout
+          </button>
+          <a href="" class="btn cancel">Cancel</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal checkout -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Checkout</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="left">
+              <p>Black Forest 1x :
+                <p>Coffe Latte 1x  :</p>
+                <p>Chocorum 1x     :</p>
+                <p>Total           :</p>
+                <p>Payment         :</p>
+                <p>PPN 10%</p>
+            </div>
+            <div class="right">
+              <p> Rp. 30.000</p>
+              <p>Rp. 15.000</p>
+              <p>Rp. 28.000</p>
+           
+              <p>Rp. 73.000</p>
+              <p>Cash</p>
+            </div>
+           
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn"
+              style="background-color: #f24f8a; color: white;"
+              data-dismiss="modal"
+            >
+              Print
+            </button>
+            OR
+            <button
+              type="button"
+              class="btn"
+              style="background-color: #57cad5; color: white;"
+            >
+              Send Email
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal add -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add item</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group row">
+                <label for="staticEmail" class="col-md-sm-2 col-md-form-label mx-2">Name</label>
+                <div class="col-md-sm-10">
+                  <input type="text" class="form-control" id="" >
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputPassword" class="col-md-sm-2 col-md-form-label mx-2">Image</label>
+                <div class="col-md-sm-10">
+                  <input type="text" class="form-control" id="" placeholder="">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputPassword" class="col-md-sm-2 col-md-form-label mx-2">Price</label>
+                <div class="col-md-sm-10">
+                  <input type="text" class="form-control" id="" placeholder="">
+                </div>
+              </div>
+              <select class="form-control">
+                <option>Category</option>
+                <option>Makanan</option>
+                <option>Minuman</option>
+              </select>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+            type="button"
+            class="btn"
+            style="background-color: #f24f8a; color: white;"
+            data-dismiss="modal"
+          >
+            Cancel
+          </button>
+        
+          <button
+            type="button"
+            class="btn"
+            style="background-color: #57cad5; color: white;"
+          >
+            Add
+          </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,310 @@
+@font-face {
+  font-family: "Airbnb Cereal App Book";
+  font-style: normal;
+  font-weight: normal;
+  src: url('./AirbnbCerealMedium.woff') format("woff");
+}
+
+body {
+  font-family: "Airbnb Cereal App Book";
+}
+
+
+/* HEADER */
+.header .col-md-4 {
+  font-size: 30px;
+  padding-top: 10px;
+  font-weight: bold;
+  box-shadow: 0px 4px 1px rgba(0, 0, 0, 0.25);
+}
+
+.header .col-md-4 span {
+  background-color: aqua;
+  color: white;
+  padding: 3px 10px;
+  font-size: 20px;
+  border-radius: 50%;
+}
+
+.header .col-md-8 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .col-md-8 div p {
+  font-size: 30px;
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+.search {
+  padding: 20px;
+}
+/* END HEADER */
+
+/* SIDEBAR */
+.sidebar .col-md-1{
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 20;
+}
+
+.sidebar .col-md-1 div {
+  cursor: pointer;
+  padding: 20px;
+}
+/* END SIDEBAR */
+
+/* MENU ITEM */
+.menu-item {
+  background-color: #eee;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-top: 10px;
+}
+
+.menu-item .selected-items {
+  position: relative;
+}
+
+.menu-item div:nth-child(odd) {
+  animation: anim 3s;
+}
+
+.menu-item div:nth-child(even) {
+  animation: anim 6s;
+}
+
+.menu-item div img {
+  transition: .3s;
+}
+
+.menu-item div img:hover{
+  transform: scale(0.9);
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.7);
+}
+
+.menu-item h3 {
+  font-size: 20px;
+  text-align: left;
+  margin-left: 10px;
+  font-weight: 300;
+  margin-top: 2px;
+  color: grey;
+}
+
+.menu-item p {
+  font-size: 15px;
+  text-align: left;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/* CEKLIS */
+.correct {
+  width: 250px;
+  height: 200px;
+  border-radius: 10px 10px 0 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top:0;
+  left: 3px;
+}
+
+.check {
+  position: absolute;
+  top: 75px;
+  left: 103px;
+}
+
+/* END MENU ITEM */
+
+/* CART */
+div.carts h2 {
+  font-size: 30px;
+}
+
+.carts .cart-img {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.carts .cart-img .selected-item {
+  margin-left: -25px;
+}
+
+.carts .cart-img .selected-item div {
+  transition: 0.3s;
+}
+
+.carts .cart-img .selected-item div:hover {
+  transform: translateY(-3px);
+}
+
+.carts .cart-img .selected-item p {
+  text-align: left;
+}
+
+.carts .cart-img .selected-item div:nth-child(odd) {
+  display: inline-block;
+  border: 1px solid limegreen;
+  padding: 10px 20px;
+  font-weight: bold;
+  color: rgb(84, 224, 84, 0.4);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.carts .cart-img .selected-item div:nth-child(even) {
+  display: inline-block;
+  border: 1px solid limegreen;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(84, 224, 84, 0.4);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.carts .cart-img .price {
+  padding-right: 20px;
+  line-height: 120px;
+  font-weight: bold;
+}
+/* END CART */
+
+/* TOTAL */
+.total p {
+  text-align: left;
+  text-indent: 20px;
+  font-weight: bold;
+}
+
+.total .checkout {
+  border: 1px solid #57cad5;
+  background-color: #57cad5;
+  color: #fff;
+  font-size: 25px;
+  width: 401px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.total .cancel {
+  margin-top: 20px;
+  border: 1px solid #f24f8a;
+  background-color: #f24f8a;
+  width: 401px;
+  color: #fff;
+  font-size: 25px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+/* END TOTAL */
+
+/* RESPONSIVE BREAKPOINTS */
+/* HP KECIL */
+@media (max-width: 575.98px) { 
+  .sidebar .col-md-1 {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .menu-item {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-item h3 {
+    font-size: 20px;
+    text-align: center;
+    margin-left: 0px;
+    margin-top: 2px;
+    color: grey;
+  }
+  
+  .menu-item p {
+    font-size: 15px;
+    text-align: center;
+    margin-left: 0px;
+  }
+
+  .carts .cart-img div img {
+    margin-left: 20px;
+  }
+
+  .correct {
+    position: absolute;
+  }
+
+  .selected-items {
+    width: 250px;
+    margin: auto;
+  }
+  
+  .carts .cart-img .selected-item {
+    margin-left: 20px;
+    box-sizing: border-box;
+  }
+ }
+
+/* HP SEDANG / */
+@media  (min-width: 576px) and (max-width: 767px)   {
+      /* SIDEBAR */
+      .sidebar .col-md-1 {
+        display: flex;
+        justify-content: space-between;
+      }
+    
+      /* HEADER */
+      .header .col-md-4 {
+        display: none;
+      }
+    
+      /* MENU ITEM */
+      .menu-item {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      
+      }
+      .menu-item h3 {
+        font-size: 20px;
+        text-align: center;
+        margin-left: 0px;
+        /* font-family: "Pacifico", cursive; */
+        margin-top: 2px;
+        color: grey;
+      }
+    
+      .menu-item p {
+        font-size: 15px;
+        text-align: center;
+        margin-left: 0px;
+      }
+
+      .correct {
+        position: absolute;
+      }
+    
+      .selected-items {
+        width: 250px;
+        margin: auto;
+        margin-top: -0px;
+      }
+      
+      .carts .cart-img .selected-item {
+        margin-left: 20px;
+        box-sizing: border-box;
+      }
+
+      .carts .cart-img img {
+        margin-left: 30px;
+        box-sizing: border-box;
+      }
+ }
+
+
+
+
+ /* MODAL */
+
+ .modal-body {
+   display: flex;
+   justify-content: space-between;
+ }
